@@ -1,0 +1,71 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--appColor); /* Adjust as needed */
+}
+
+.logo {
+    width: 10rem;
+    height: 3rem;
+}
+
+.header-menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    color: white;
+    align-items: center;
+}
+
+.header-menu > li:hover {
+    cursor: pointer;
+    color: var(--orange);
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .header {
+        position: relative;
+        padding: 1rem;
+    }
+
+    .header > div:nth-child(2) {
+        position: fixed;
+        right: 2rem;
+        top: 1rem;
+        z-index: 99;
+        background-color: var(--appColor);
+        padding: 0.5rem;
+        border-radius: 5px;
+    }
+
+    .header-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--appColor);
+        padding: 2rem;
+        z-index: 98;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .header-menu.open {
+        transform: translateX(0);
+    }
+
+    .header-menu > li {
+        margin: 1rem 0;
+    }
+
+    .header-menu > li:hover {
+        color: var(--orange);
+    }
+}

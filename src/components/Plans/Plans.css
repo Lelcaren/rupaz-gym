@@ -1,0 +1,76 @@
+.plans-container {
+    margin-top: -4rem;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    position: relative;
+}
+
+
+.plans-blur-1{
+    width: 32rem;
+    height: 23rem;
+    top: 6rem;
+    left: 0rem;
+}
+.plans-blur-2{
+width: 32rem;
+height: 23rem;
+top: 10rem;
+right: 0rem;
+}
+.plans {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.plan {
+    display: flex;
+    flex-direction: column;
+    background: var(--caloryCard); /* Ensure this variable is defined */
+    color: white;
+    gap: 2rem;
+    padding: 1.5rem;
+    width: 15rem;
+}
+
+.plan:nth-child(2) {
+    background: var(--planCard); /* Ensure this variable is defined */
+    transform: scale(1.1);
+}
+
+.plan span {
+    font-size: 1rem;
+}
+
+.plan svg {
+    fill: var(--orange); /* Ensure this variable is defined */
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Specific styling for the price */
+.plan .price {
+    font-size: 1.5rem; /* Increase font size for the price */
+    font-weight: bold;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.plans>:nth-child(2)>svg{
+    color: orange;
+}
+@media screen  and(max-width:768) {
+    .plans{
+        flex-direction: column;
+    }
+    .plans>:nth-child(2){
+        transform: none;
+    }
+}
